@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+		
+	<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
+	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
+	
+	<script type="text/javascript">
+	(function(window, Util, PhotoSwipe){
+
+		Util.Events.domReady(function(e){
+
+			var instance;
+
+			instance = PhotoSwipe.attach(
+				[
+					{ url: 'images/placeholder/mimic-octopus-smooth.jpg', caption: 'Mimic Octopus - normal'},
+					{ url: 'images/placeholder/mimic-octopus-rough.jpg', caption: 'Mimic Octopus - imitating sea sponge, '},
+					{ url: 'images/placeholder/mimic-octopus-lionfish.jpg', caption: 'Mimic Octopus - imitating lionfish'},
+					{ url: 'images/placeholder/texas-wasp-moth.jpg', caption: 'Texas Wasp Moth'},
+
+				],
+				{
+					target: window.document.querySelectorAll('#PLACEHOLDGALLERY')[0],
+					preventHide: true,
+					getImageSource: function(obj){
+						return obj.url;
+					},
+					getImageCaption: function(obj){
+						return obj.caption;
+					}
+				}
+			);
+			instance.show(0);	
+		});
+	}(window, window.Code.Util, window.Code.PhotoSwipe));
+	</script>
+	
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>	
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+	
+
+</head>
+<body>
+	<div data-role="page" id="placeholder">
+		<div data-role="header">
+			<h1>placeholder mimicry</h1>
+			<a data-theme="a" data-role="button" href="types.html" rel="external" data-transition="slide" data-direction="reverse">types</a>
+		</div>
+		<div class="background">
+			<div class="gallerypane" id="PLACEHOLDGALLERY">
+
+			</div>
+			<div class="infopane">
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

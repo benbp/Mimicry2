@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+		
+	<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
+	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
+	
+	<script type="text/javascript">
+	(function(window, Util, PhotoSwipe){
+
+		Util.Events.domReady(function(e){
+
+			var instance;
+
+			instance = PhotoSwipe.attach(
+				[
+					{ url: 'images/atlasmoth-portrait.jpg', caption: 'Atlas Moth'},
+					{ url: 'images/earlyspiderorchid-portrait.jpg', caption: 'Early Spider Orchid'},
+					{ url: 'images/siphantaacuta-portrait.jpg', caption: 'Planthopper'},
+				],
+				{
+					target: window.document.querySelectorAll('#bggallery')[0],
+					preventHide: true,
+					getImageSource: function(obj){
+						return obj.url;
+					},
+					getImageCaption: function(obj){
+						return obj.caption;
+					}
+				}
+			);
+			instance.show(0);	
+		});
+	}(window, window.Code.Util, window.Code.PhotoSwipe));
+	</script>
+	
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link type="text/css" rel="stylesheet" href="main.css" />
+	<link type="text/css" rel="stylesheet" href="test.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+	
+	
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	
+	<script>
+				$(document).bind("mobileinit", function() {
+					$.mobile.page.prototype.options.addBackBtn = true;
+				});
+	</script>
+	
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	
+
+
+</head>
+<body>
+	<div data-role="page" id="home">
+		<div class="background">
+			<div class="homemenu">
+				<ul>    
+					<li><a data-role="button" data-theme="a" href="#whatismimicry" data-transition="pop">what is mimicry</a></li>
+					<li><a data-role="button" data-theme="a" href="#types" data-transition="pop">types of mimicry</a></li>
+					<li><a data-role="button" data-theme="a" href="#species" data-transition="pop">species examples</a></li>
+				</ul>
+			</div>
+			<div id="bggallery">
+				
+			</div>
+
+			
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+	
+<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
+<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
+
+<script type="text/javascript">
+(function(window, Util, PhotoSwipe){
+
+	Util.Events.domReady(function(e){
+
+		var instance;
+
+		instance = PhotoSwipe.attach(
+			[
+				{ url: 'images/atlasmoth-portrait.jpg', caption: 'Atlas Moth'},
+				{ url: 'images/earlyspiderorchid-portrait.jpg', caption: 'Early Spider Orchid'},
+				{ url: 'images/siphantaacuta-portrait.jpg', caption: 'Planthopper'},
+			],
+			{
+				target: window.document.querySelectorAll('#bggallery')[0],
+				preventHide: true,
+				getImageSource: function(obj){
+					return obj.url;
+				},
+				getImageCaption: function(obj){
+					return obj.caption;
+				}
+			}
+		);
+		instance.show(0);	
+	});
+}(window, window.Code.Util, window.Code.PhotoSwipe));
+</script>
+
+<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+<link type="text/css" rel="stylesheet" href="main.css" />
+<link type="text/css" rel="stylesheet" href="test.css" />
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+
+
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+<script>
+			$(document).bind("mobileinit", function() {
+				$.mobile.page.prototype.options.addBackBtn = true;
+			});
+</script>
+
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
+
+</head>
+<body>
+	<div data-role="page" id="types">
+		<div data-role="header" data-theme="a">
+			<h2>types of mimicry</h2>
+			<a data-theme="a" data-role="button" href="index.html" data-ajax="false">Home</a>
+		</div>
+		<div class="background">
+				<div class="types">
+					<p><a href="#defensive" data-transition="pop">defensive<a></p>
+					<div class="typelist">
+							<a href="batesian.html" rel="external"><img src="images/batesian.jpg" /></a>
+							<div class="typelabel"><a href="batesian.html" rel="external" data-transition="slide">Batesian</a></div>
+					</div>
+					<div class="typelist">
+							<a href="mullerian.html" rel="external"><img src="images/mullerian.jpg" /></a>
+							<div class="typelabel"><a href="mullerian.html" rel="external">M&uuml;llerian</a></div>
+					</div>
+					<div class="typelist">
+							<a href="emsleyan-mertensian.html" rel="external"><img src="images/emsleyan-mertensian.jpg" /></a>
+							<div class="typelabel"><a href="emsleyan-mertensian.html" rel="external">Emsleyan/<br />Mertensian</a></div>
+					</div>
+					<div class="typelist">
+							<a href="vavilonian.html" rel="external"><img src="images/vavilonian.jpg" /></a>
+							<div class="typelabel"><a href="vavilonian.html" rel="external">Vavilonian</a></div>
+					</div>
+					<div class="typelist">
+							<a href="gilbertian.html" rel="external"><img src="images/gilbertian.jpg" /></a>
+							<div class="typelabel"><a href="gilbertian.html" rel="external">Gilbertian</a></div>
+					</div>
+					<div class="typelist">
+							<a href="browerian.html" rel="external"><img src="images/browerian.jpg" /></a>
+							<div class="typelabel"><a href="browerian.html" rel="external">Browerian</a></div>
+					</div>
+				</div>
+				
+				<div class="types">
+					<p><a href="#aggressive" data-transition="pop">aggressive</a><p>
+					<div class="typelist">
+							<a href="luringprey.html" rel="external"><img src="images/luringprey.jpg" /></a>
+							<div class="typelabel"><a href="luringprey.html" rel="external">luring prey</a></div>
+					</div>
+					<div class="typelist">
+							<a href="batesian-wallacian.html" rel="external"><img src="images/batesian-wallacian.jpg" /></a>
+							<div class="typelabel"><a href="batesian-wallacian.html" rel="external">Batesian-<br />Wallacian</a></div>
+					</div>
+					<div class="typelist">
+							<a href="broodparasitism.html" rel="external"><img src="images/broodparasitism.jpg" /></a>
+							<div class="typelabel"><a href="broodparasitism.html" rel="external">brood<br />parasitism</a></div>
+					</div>
+					<div class="typelist">
+							<a href="wicklerian-eisnerian.html" rel="external"><img src="images/Wicklerian-Eisnerian.jpg" /></a>
+							<div class="typelabel"><a href="wicklerian-eisnerian.html" rel="external">Wicklerian-<br />Eisnerian</a></div>
+					</div>
+					<div class="typelist">
+							<a href="crypticmimicry.html" rel="external"><img src="images/crypticmimicry.jpg" /></a>
+							<div class="typelabel"><a href="crypticmimicry.html" rel="external">cryptic<br />mimicry</a></div>
+					</div>
+					<div class="typelist">
+							<a href="hostprey.html" rel="external"><img src="images/hostprey.jpg" /></a>
+							<div class="typelabel"><a href="hostprey.html" rel="external">host prey<br />mimicry</a></div>
+					</div>
+				</div>
+				
+				<div class="types">
+					<p><a href="#reproductive" data-transition="pop">reproductive</a></p>
+					<div class="typelist">
+						<a href="mimicryofflowers.html" rel="external"><img src="images/mimicryofflowers.jpg"></img></a>
+						<div class="typelabel"><a href="mimicryofflowers.html" rel="external">mimicry of<br />flowers</a></div>
+					</div>
+					<div class="typelist">
+						<a href="pseudocopulation.html" rel="external"><img src="images/pseudocopulation.jpg"></img></a>
+						<div class="typelabel"><a href="pseudocopulation.html" rel="external">pseudo-<br />copulation</a></div>
+					</div>
+					<div class="typelist">
+						<a href="inter-sexual.html" rel="external"><img src="images/inter-sexual.jpg"></img></a>
+						<div class="typelabel"><a href="inter-sexual.html" rel="external">inter-sexual</a></div>
+					</div>
+				</div>
+			   	<div class="types">
+			   		<div class="typelist">
+						<p><a href="#automimicry" data-transition="pop">automimicry</a></p>
+			   			<a href="automimicry.html" rel="external"><img src="images/automimicry.jpg"></img></a>
+					</div>
+			   	</div>
+			</div>
+		</div>
+		
+<!-- DEFINITIONS, ADD PHOTO GALLERY TO EACH PAGE THAT COMPILES THE PHOTOS AND CAPTIONS OF ALL MIMICRY EXAMPLES UNDER THAT HEADER -->
+		
+<div data-role="page" id="defensive">
+	<div data-role="header">
+		<h1>defensive mimicry</h1>
+	</div>
+	
+	<div class="background">
+		<div class="gallerypane">
+			
+		</div>
+		<p>
+			Defensive or protective mimicry takes place when organisms are able to avoid encounters that would be harmful to them by deceiving enemies into treating them as something else. This can entail mimicry of organisms protected by warning colouration: Batesian mimicry, where a harmless mimic poses as harmful; M&uuml;llerian mimicry, where two or more harmful species mutually advertise themselves as harmful; or Mertensian mimicry, where a deadly mimic resembles a less harmful but lesson-teaching model. Another case, Vavilovian mimicry, where weeds resemble crops, is important for several reasons; and humans are the agent of selection.
+		</p>
+	</div>
+</div>
+
+<div data-role="page" id="aggressive">
+	<div data-role="header">
+		<h1>aggressive mimicry</h1>
+	</div>
+	
+	<div class="background">
+		<div class="gallerypane">
+			
+		</div>
+		<p>
+			Aggressive mimicry is a form of mimicry where predators, parasites or parasitoids share similar signals with a harmless model, allowing them to avoid being correctly identified by their prey or host. In its broadest sense, it involves any type of exploitation, such as an orchid exploiting a male insect by mimicking a sexually receptive female. The metaphor of a wolf in sheep's clothing can be used as an analogy, but with the caveat that mimics are not intentionally deceiving their prey. For example, indigenous Australians who dress up as and imitate kangaroos when hunting would not be considered aggressive mimics, nor would a human angler. Treated separately is molecular mimicry, which also shares some similarity; for instance a virus may mimic the molecular properties of its host, allowing it access to its cells.
+		</p>
+	</div>
+</div>
+
+<div data-role="page" id="reproductive">
+	<div data-role="header">
+		<h1>reproductive mimicry</h1>
+	</div>
+	
+	<div class="background">
+		<div class="gallerypane">
+			
+		</div>
+		<p>
+			Reproductive mimicry occurs when the actions of the dupe directly aid in the mimic's reproduction. This is common in plants, which may have deceptive flowers that do not provide the reward they would seem to. Other forms of mimicry have a reproductive component, such as Vavilovian mimicry involving seeds, and brood parasitism, which also involves aggressive mimicry.
+		</p>
+	</div>
+</div>
+
+<div data-role="page" id="automimicry">
+	<div data-role="header">
+		<h1>automimicry</h1>
+	</div>
+	
+	<div class="background">
+		<div class="gallerypane">
+			
+		</div>
+		<p>
+			Automimicry or intraspecific mimicry occurs within a single species, one case being where one part of an organism's body resembles another part. Examples include snakes in which the tail resembles the head and show behavior such as moving backwards to confuse predators and insects and fishes with eyespots on their hind ends to resemble the head. The term is also used when the mimic imitates other morphs within the same species. When males mimic females or vice versa this may be referred to as sexual mimicry.
+		</p>
+	</div>
+</div>
+
+</body>
+</html>
