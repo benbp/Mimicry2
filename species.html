@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />	
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>	
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>					
+
+													<!-- PHOTOSWIPE -->
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />														
+	<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
+	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+
+			var myPhotoSwipe = $(".speciesgallery a").photoSwipe({ enableMouseWheel: false , enableKeyboard: false });
+
+		});
+	</script>
+													<!-- PHOTOSWIPE -->
+													
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+
+	
+	<link type="text/css" rel="stylesheet" href="main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	<div data-role="page" class="background">
+		<div data-role="header">
+			<h1>species examples</h1>
+			<a data-theme="a" data-role="button" href="index.html" rel="external" data-transition="slide" data-direction="reverse">home</a>		
+		</div>
+		<div data-role="content">
+				<div class="speciesgallery">
+					<ul>
+						<li><a href="images/batesian/mimic-octopus-rough.jpg"><img src="images/batesian.jpg" /></a></li>
+						<li><a href="images/batesian/mimic-octopus-rough.jpg"><img src="images/batesian.jpg" /></a></li>
+						<li><a href="images/batesian/mimic-octopus-rough.jpg"><img src="images/batesian.jpg" /></a></li>
+					</ul>
+				</div>
+				<div class="speciesgallery">
+					<ul>
+						<li><a href="images/batesian/mimic-octopus-rough.jpg"><img src="images/batesian.jpg" /></a></li>
+						<li><a href="images/batesian/mimic-octopus-rough.jpg"><img src="images/batesian.jpg" /></a></li>
+						<li><a href="images/batesian/mimic-octopus-rough.jpg"><img src="images/batesian.jpg" /></a></li>
+					</ul>
+				</div>
+		</div>
+	</div>	
+</body>
+</html>

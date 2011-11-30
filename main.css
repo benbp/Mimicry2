@@ -23,7 +23,7 @@
 	overflow:auto;
 }
 
-									/* --------- TYPES --------- */	
+													/* --------- TYPES --------- */	
 
 .types {
 	overflow:auto;
@@ -84,7 +84,7 @@
 	font-family:'Open Sans';
 }
 
-/* FORMATTING FOR TYPES OF MIMICRY PAGES */
+											/* FORMATTING FOR TYPES OF MIMICRY PAGES */
 
 .infopane {
 	overflow:auto;
@@ -108,3 +108,20 @@
 	padding-bottom:5px;
 }
 
+.speciesgallery {
+	display:block;
+	width:100%;
+}
+
+.speciesgallery ul {
+	list-style:none;
+}
+
+.speciesgallery li {
+	display:inline;
+	padding:5px;
+}
+
+.speciesgallery ul li img {
+	border: 1px solid black;
+}
