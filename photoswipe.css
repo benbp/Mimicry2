@@ -71,7 +71,7 @@ div.ps-caption
 	border-bottom: 1px solid #42403f;
 	color: #ffffff;
 	font-size: 13px;
-	font-family: "Lucida Grande", Helvetica, Arial,Verdana, sans-serif;
+	font-family: "Arial", Verdana, sans-serif;
 	text-align: center;
 }
 div.ps-caption *  { display: inline; }
@@ -99,7 +99,7 @@ div.ps-toolbar
 	border-top: 1px solid #42403f;
 	color: #ffffff;
 	font-size: 13px;
-	font-family: "Lucida Grande", Helvetica, Arial,Verdana, sans-serif;
+	font-family: Arial,Verdana, sans-serif;
 	text-align: center;
 	height: 44px;
 	display: table;

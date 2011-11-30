@@ -57,8 +57,6 @@
 	text-align:center;
 }
 
-
-
 .types p {
 	text-align:left;
 	padding:0;
@@ -77,11 +75,7 @@
 
 #defensive p, #aggressive p, #reproductive p, #automimicry p {
 	margin: 20px 30px 0 30px;
-	color:#E1E1E1;
-	font-size:20px;
 	line-height:32px;
-	text-align:center;
-	font-family:'Open Sans';
 }
 
 											/* FORMATTING FOR TYPES OF MIMICRY PAGES */
@@ -119,9 +113,46 @@
 
 .speciesgallery li {
 	display:inline;
-	padding:5px;
+	padding: 0 5px 0 5px;
 }
 
 .speciesgallery ul li img {
 	border: 1px solid black;
+	width:100px;
+	height:100px;
+}
+
+.speciesgallery p {
+	color:#E1E1E1;
+	letter-spacing:7px;
+	text-shadow: 1px 1px 1px black;
+	font-family:verdana;
+	font-size:36px;
+	padding:0 0 0 10px;
+	margin:0;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	
+	.types {
+		width:400px;
+	}
+	
+	.typesright {
+		float:right;
+		margin-right:8%;
+	}
+	
+	.typesleft {
+		float:left;
+		margin-left:12%;
+	}
+	
+	.typelist {
+		text-align:center;
+	}	
+	
 }
