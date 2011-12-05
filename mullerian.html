@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		
+															<!-- PHOTOSWIPE -->
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+															
+	<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
+	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
+	
+	<script type="text/javascript">
+	(function(window, Util, PhotoSwipe){
+
+		Util.Events.domReady(function(e){
+
+			var instance;
+
+			instance = PhotoSwipe.attach(
+				[
+					{ url: 'images/mullerian/heliconius.jpg', caption: 'Heliconius butterflies'},
+					{ url: 'images/mullerian/viceroy.jpg', caption: 'Viceroy butterfly - mimics Monarch'},
+					{ url: 'images/mullerian/monarch.jpg', caption: 'Monarch butterfly - foul tasting/poisonous'},
+				],
+				{
+					target: window.document.querySelectorAll('#mulleriangallery')[0],
+					preventHide: true,
+					getImageSource: function(obj){
+						return obj.url;
+					},
+					getImageCaption: function(obj){
+						return obj.caption;
+					}
+				}
+			);
+			instance.show(0);	
+		});
+	}(window, window.Code.Util, window.Code.PhotoSwipe));
+	</script>
+															<!-- /PHOTOSWIPE -->
+
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>	
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+	
+
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>mullerian mimicry</h1>
+			<a data-theme="a" data-role="button" href="types.html" rel="external" data-transition="slide" data-direction="reverse">types</a>
+		</div>
+		<div class="background">
+			<div class="gallerypane" id="mulleriangallery">
+
+			</div>
+			<div class="infopane">
+				<p>
+					M&uuml;llerian mimicry is a natural phenomenon when two or more harmful species, that may or may not be closely related and share one or more common predators, have come to mimic each other's warning signals. It is named after the German naturalist Fritz M&uuml;ller, who first proposed the concept in 1878.
+					It can be contrasted with Batesian mimicry, where a harmless organism imitating the protected species is referred to as the mimic and the dangerous one being imitated the model. M&uuml;llerian mimicry differs because both parties are harmful; each mimics the other species, while serving as a model at the same time. If one species is encountered far less than the other, the more common species could be treated as the model and the other the mimic. However, if they are encountered in similar numbers they would best be termed comimics or mimic-models. The predator mediating indirect convergence between these two parties is known as the signal receiver or dupe, though the latter term is less relevant here, as they are not actually deceived about the harmful qualities of their prey; both prey provide an honest warning signal. For this reason, Georges Pasteur has asserted that it is not a form of mimicry at all, as no deception is involved. Unlike other mimicry systems, the signal receiver is better off for mistaking one harmful species for another, as it avoids the potential harm involved.
+					However, because comimics may have differing degrees of protection, the distinction between M&uuml;llerian and Batesian mimicry is not absolute, and there can be said to be a spectrum between the two forms. Additionally, a species may be a Batesian mimic to one predator and a M&uuml;llerian mimic to another. While Batesian and M&uuml;llerian mimicry are commonly given examples of mimicry, there is often little or no mention of other forms. There are many other types of mimicry however, some very similar in principle, others far separated. For example in aggressive mimicry a predator might mimic the food of its prey, luring them towards it and improving its foraging success.
+					M&uuml;llerian mimicry need not involve visual mimicry; it may employ any of the senses. For example, many snakes share the same auditory warning signals, forming an auditory M&uuml;llerian mimicry ring. More than one common signal may show convergences by the parties. While model and mimic are often closely related species, M&uuml;llerian mimicry between very distantly related taxa also occurs.
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

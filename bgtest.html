@@ -7,31 +7,42 @@
 	<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
 	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
 	
-	<script type="text/javascript">	
+	<script type="text/javascript">
+	
+	
+	var landscapegallery;
+	var portraitgallery;
+	
+	landscapegallery = PhotoSwipe.attach(
+		[
+			{ url: 'images/atlasmoth-landscape.jpg', caption: 'Atlas Moth'},
+			{ url: 'images/earlyspiderorchid-landscape.jpg', caption: 'Early Spider Orchid'},
+			{ url: 'images/siphantaacuta-landscape.jpg', caption: 'Planthopper'},
+		],
+		{
+			target: window.document.querySelectorAll('#bggallery')[0],
+			preventHide: true,
+			getImageSource: function(obj){
+				return obj.url;
+			},
+			getImageCaption: function(obj){
+				return obj.caption;
+			}
+		}
+	);
+	
+	
 	(function(window, Util, PhotoSwipe){
 
 		Util.Events.domReady(function(e){
+			 
+			if(window.orientation == 0){
+					landscapegallery.show(0);
+			    }else{
+					portraitgallery.show(0);
+			    }
 
-			var instance;
-
-			instance = PhotoSwipe.attach(
-				[
-					{ url: 'images/atlasmoth-landscape.jpg', caption: 'Atlas Moth'},
-					{ url: 'images/earlyspiderorchid-landscape.jpg', caption: 'Early Spider Orchid'},
-					{ url: 'images/siphantaacuta-landscape.jpg', caption: 'Planthopper'},
-				],
-				{
-					target: window.document.querySelectorAll('#bggallery')[0],
-					preventHide: true,
-					getImageSource: function(obj){
-						return obj.url;
-					},
-					getImageCaption: function(obj){
-						return obj.caption;
-					}
-				}
-			);
-			instance.show(0);	
+			landscapegallery.show(0);	
 		});
 	}(window, window.Code.Util, window.Code.PhotoSwipe));
 	</script>

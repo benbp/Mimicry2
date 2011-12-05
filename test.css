@@ -4,14 +4,15 @@
 	position:absolute;
 	background-color:black;
 	overflow:hidden;
+	z-index:0;
 }
-
 
 .homemenu {
 	position:fixed;
 	bottom:40px;
 	left:30px;
 	width:300px;
+	z-index:1;
 }
 
 .background {
@@ -22,7 +23,7 @@
 	overflow:auto;
 }
 
-									/* --------- TYPES --------- */	
+													/* --------- TYPES --------- */	
 
 .types {
 	overflow:auto;
@@ -56,8 +57,6 @@
 	text-align:center;
 }
 
-
-
 .types p {
 	text-align:left;
 	padding:0;
@@ -76,17 +75,24 @@
 
 #defensive p, #aggressive p, #reproductive p, #automimicry p {
 	margin: 20px 30px 0 30px;
-	color:#E1E1E1;
-	font-size:20px;
 	line-height:32px;
-	text-align:center;
-	font-family:'Open Sans';
 }
 
-/* FORMATTING FOR TYPES OF MIMICRY PAGES */
+											/* FORMATTING FOR TYPES OF MIMICRY PAGES */
 
 .infopane {
-	overflow:scroll;
+	overflow:auto;
+	width:100%;
+	height:360px;
+	padding-top: 5px;	
+}
+
+.infopane p {
+	color: #E1E1E1;
+	font-family:'Josefin Sans';
+	font-size:24px;
+	padding: 0 10px 0 10px;
+	text-shadow: none;
 }
 
 .gallerypane {
@@ -96,3 +102,79 @@
 	padding-bottom:5px;
 }
 
+.speciesgallery {
+	display:block;
+	width:100%;
+}
+
+.speciesgallery ul {
+	list-style:none;
+}
+
+.speciesgallery li {
+	display:inline;
+	padding: 0 5px 0 5px;
+}
+
+.speciesgallery ul li img {
+	border: 1px solid black;
+	width:100px;
+	height:100px;
+}
+
+.speciesgallery p {
+	color:#E1E1E1;
+	letter-spacing:7px;
+	text-shadow: 1px 1px 1px black;
+	font-family:verdana;
+	font-size:36px;
+	padding:0 0 0 10px;
+	margin:0;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	
+	.types {
+		width:400px;
+	}
+	
+	.typesright {
+		float:right;
+		margin-right: 8%;
+	}
+	
+	.typesleft {
+		float:left;
+		margin-left:12%;
+	}
+	
+	.typelist {
+		text-align:center;
+	}	
+											/* FORMATTING FOR TYPES OF MIMICRY PAGES */
+	
+	
+	  .infopane {
+		left:5px;
+	  	width:300px;
+		height:100%;
+	  	padding-top: 5px;
+	  }
+     
+	  .gallerypane {
+		width:700px;
+		height:100%;
+		padding-left:5px;
+	  }
+
+	.landscape {
+	}
+	
+	.portrait p {
+		display:none;
+	}
+	
+}

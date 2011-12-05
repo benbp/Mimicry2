@@ -11,9 +11,6 @@
 	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
 	
 	<script type="text/javascript">
-	
-	var images = { url: 'images/batesian/mimic-octopus-smooth.jpg', caption: 'Mimic Octopus - normal'};
-	
 	(function(window, Util, PhotoSwipe){
 
 		Util.Events.domReady(function(e){
@@ -22,14 +19,12 @@
 
 			instance = PhotoSwipe.attach(
 				[
-					{ url: 'images/batesian/mimic-octopus-smooth.jpg', caption: 'Mimic Octopus - normal'},
-					{ url: 'images/batesian/mimic-octopus-rough.jpg', caption: 'Mimic Octopus - imitating sea sponge, '},
-					{ url: 'images/batesian/mimic-octopus-lionfish.jpg', caption: 'Mimic Octopus - imitating lionfish'},
-					{ url: 'images/batesian/texas-wasp-moth.jpg', caption: 'Texas Wasp Moth'},
-
+					{ url: 'images/hostprey/.jpg', caption: ''},
+					{ url: 'images/hostprey/.jpg', caption: ''},
+					{ url: 'images/hostprey/.jpg', caption: ''},
 				],
 				{
-					target: window.document.querySelectorAll('#batesiangallery')[0],
+					target: window.document.querySelectorAll('#hostpreygallery')[0],
 					preventHide: true,
 					getImageSource: function(obj){
 						return obj.url;
@@ -49,7 +44,7 @@
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>	
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 	
-	<link type="text/css" rel="stylesheet" href="test.css" />
+	<link type="text/css" rel="stylesheet" href="main.css" />
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
 	
 
@@ -57,27 +52,16 @@
 <body>
 	<div data-role="page">
 		<div data-role="header">
-			<h1>batesian mimicry</h1>
+			<h1>host-prey mimicry</h1>
 			<a data-theme="a" data-role="button" href="types.html" rel="external" data-transition="slide" data-direction="reverse">types</a>
 		</div>
-		<div class="background landscape">
-			<div class="gallerypane" id="batesiangallery">
+		<div class="background">
+			<div class="gallerypane" id="hostpreygallery">
 
 			</div>
 			<div class="infopane">
 				<p>
-					landscape
-				</p>
-			</div>
-		</div>
-		
-		<div class="background portrait">
-			<div class="gallerypane" id="batesiangallery">
 
-			</div>
-			<div class="infopane">
-				<p>
-					a
 				</p>
 			</div>
 		</div>
