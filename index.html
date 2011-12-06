@@ -8,13 +8,16 @@
 	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
 	
 	<script type="text/javascript">	
+	/* on orientation change, call below */
+	
 	(function(window, Util, PhotoSwipe){
 
 		Util.Events.domReady(function(e){
 
-			var instance;
+			var landscape;
+			var portrait;
 
-			instance = PhotoSwipe.attach(
+			landscape = PhotoSwipe.attach(
 				[
 					{ url: 'images/atlasmoth-landscape.jpg', caption: 'Atlas Moth'},
 					{ url: 'images/earlyspiderorchid-landscape.jpg', caption: 'Early Spider Orchid'},
@@ -31,7 +34,32 @@
 					}
 				}
 			);
-			instance.show(0);	
+			
+			 portrait = PhotoSwipe.attach(
+			 	[
+			 		{ url: 'images/atlasmoth-portrait.jpg', caption: 'Atlas Moth'},
+			 		{ url: 'images/earlyspiderorchid-portrait.jpg', caption: 'Early Spider Orchid'},
+			 		{ url: 'images/siphantaacuta-portrait.jpg', caption: 'Planthopper'},
+			 	],
+			 	{
+			 		target: window.document.querySelectorAll('#bggallery')[0],
+			 		preventHide: true,
+			 		getImageSource: function(obj){
+			 			return obj.url;
+			 		},
+			 		getImageCaption: function(obj){
+			 			return obj.caption;
+			 		}
+			 	}
+			 );
+			
+			if(Util.DOM.windowWidth() > Util.DOM.windowHeight()){
+				landscape.show(0);
+			}
+			else {
+				portrait.show(0);
+			}
+			
 		});
 	}(window, window.Code.Util, window.Code.PhotoSwipe));
 	</script>
@@ -55,7 +83,7 @@
 
 </head>
 <body>
-	<div data-role="page" id="home">
+	<div data-role="page" id="home" class="page">
 		<div class="background">
 			<div class="homemenu">
 				<ul>    
