@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		
+															<!-- PHOTOSWIPE -->
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+															
+	<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
+	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
+	
+	<script type="text/javascript">
+	(function(window, Util, PhotoSwipe){
+
+		Util.Events.domReady(function(e){
+
+			var instance;
+
+			instance = PhotoSwipe.attach(
+				[
+					{ url: 'images/emsleyan/texascoralsnake.jpg', caption: 'Texas Coral Snake'},
+					{ url: 'images/emsleyan/mexicanmilksnake.jpg', caption: 'Mexican Milk Snake'}
+				],
+				{
+					target: window.document.querySelectorAll('#emsleyangallery')[0],
+					preventHide: true,
+					getImageSource: function(obj){
+						return obj.url;
+					},
+					getImageCaption: function(obj){
+						return obj.caption;
+					}
+				}
+			);
+			instance.show(0);	
+		});
+	}(window, window.Code.Util, window.Code.PhotoSwipe));
+	</script>
+															<!-- /PHOTOSWIPE -->
+
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>	
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+	
+
+</head>
+<body>
+	<div data-role="page" class="page">
+		<div data-role="header">
+			<h1>emsleyan mimicry</h1>
+			<a data-theme="a" data-role="button" href="types.html" rel="external" data-transition="slide" data-direction="reverse">types</a>
+		</div>
+		<div class="background">
+			<div class="gallerypane" id="emsleyangallery">
+
+			</div>
+			<div class="infopane">
+				<p>
+Emsleyan or Mertensian mimicry describes unusual cases where deadly prey mimic a less dangerous species. It was first proposed by Emsley as a possible answer for the problem of Coral Snake mimicry in the New World. It was elaborated on by the German biologist Wolfgang Wickler in a chapter of Mimicry in Plants and Animals, who named it after the German herpetologist Robert Mertens. Sheppard points out that Hecht and Marien put forward a similar hypothesis ten years earlier.<br /><br />This scenario is a little more difficult to understand, as in other types of mimicry it is usually the most harmful species that is the model. But if a predator dies, it cannot learn to recognize a warning signal, e.g. bright colors in a certain pattern. In other words, there is no advantage in being aposematic for an organism that is likely to kill any predator it succeeds in poisoning; such an animal would rather profit from being camouflaged, to avoid attacks altogether. If, however, there is some other species that is harmful but not deadly as well as aposematic, the predator may learn to recognize its particular warning colors and avoid such animals. A deadly species will then profit by mimicking the less dangerous aposematic organism, if this results in less attacks than camouflage would.<br /><br />The exception here, ignoring any chance of animals learning by watching a conspecific die (see Jouventin et al. for a discussion of observational learning and mimicry), is the possibility of not having to learn that it is harmful in the first place: instinctive genetic programming to be wary of certain signals. In this case, other organisms could benefit from this programming, and Batesian or Müllerian mimics of it could potentially evolve. In fact, it has been shown that some species do have an innate recognition of certain aposematic warnings. Hand-reared Turquoise-browed Motmots (Eumomota superciliosa), avian predators, instinctively avoid snakes with red and yellow rings. Other colors with the same pattern, and even red and yellow stripes with the same width as rings, were tolerated. However, models with red and yellow rings were feared, with the birds flying away and giving alarm calls in some cases. This provides one alternative explanation to Mertensian mimicry. See Greene and McDiarmid for a review of the subject.<br /><br />Examples:<br /><br />Some Milk Snake (Lampropeltis triangulum) subspecies (harmless), the moderately toxic False Coral Snakes (genus Erythrolamprus), and the deadly Coral Snakes all have a red background color with black and white/yellow rings. In this system, both the milk snakes and the deadly coral snakes are mimics, whereas the false coral snakes are the model.
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

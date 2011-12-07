@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		
+															<!-- PHOTOSWIPE -->
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+															
+	<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
+	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
+	
+	<script type="text/javascript">	
+	(function(window, Util, PhotoSwipe){
+
+		Util.Events.domReady(function(e){
+
+			var instance;
+
+			instance = PhotoSwipe.attach(
+				[
+					{ url: 'images/automimicry/redbandedhairstreak.jpg', caption: 'Red Banded Hairstreak'},
+					{ url: 'images/automimicry/zebras.jpg', caption: 'Zebras'},
+				],
+				{
+					target: window.document.querySelectorAll('#automimicrygallery')[0],
+					preventHide: true,
+					getImageSource: function(obj){
+						return obj.url;
+					},
+					getImageCaption: function(obj){
+						return obj.caption;
+					}
+				}
+			);
+			instance.show(0);	
+		});
+	}(window, window.Code.Util, window.Code.PhotoSwipe));
+	</script>
+															<!-- /PHOTOSWIPE -->
+
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>	
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+	
+
+</head>
+<body>
+	<div data-role="page" class="page" class="page">
+		<div data-role="header">
+			<h1>automimicry mimicry</h1>
+			<a data-theme="a" data-role="button" href="types.html" rel="external" data-transition="slide" data-direction="reverse">types</a>
+		</div>
+		<div class="background">
+			<div class="gallerypane" id="automimicrygallery">
+
+			</div>
+ 			<div class="infopane">
+ 				<p>
+				Automimicry or intraspecific mimicry occurs within a single species, one case being where one part of an organism&#39;s body resembles another part. Examples include snakes in which the tail resembles the head and show behavior such as moving backwards to confuse predators and insects and fishes with eyespots on their hind ends to resemble the head. The term is also used when the mimic imitates other morphs within the same species. When males mimic females or vice versa this may be referred to as sexual mimicry.<br /><br />Examples:<br /><br />Many insects have filamentous &#34tails&#34 at the ends of their wings which are combined with patterns of markings on the wings themselves to create a &#34false head&#34 which misdirects predators (e.g., hairstreak butterflies).<br /><br />Several pygmy owls bear &#34false eyes&#34 on the back of their head to fool predators into believing the owl is alert to their presence.<br /><br />The yellow throated males of the Common Side-blotched Lizard use a &#39;sneaking&#39; strategy in mating. They look and behave like unreceptive females. This strategy is effective against &#39;usurper&#39; males with orange throats, but ineffective against blue throated &#39;guarder&#39; males, which will chase them away.<br /><br />Female hyenas have pseudo-penises which make them look like males.
+				</p>
+				
+			</div> 
+		</div>
+	</div>
+
+</body>
+</html>

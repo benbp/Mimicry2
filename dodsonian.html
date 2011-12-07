@@ -19,12 +19,12 @@
 
 			instance = PhotoSwipe.attach(
 				[
-					{ url: 'images/vavilonian/.jpg', caption: ''},
-					{ url: 'images/vavilonian/.jpg', caption: ''},
-					{ url: 'images/vavilonian/.jpg', caption: ''},
+					{ url: 'images/dodsonian/epidendrumibaguense.jpg', caption: 'Epidendrum ibaguense'},
+					{ url: 'images/dodsonian/lantana.jpg', caption: 'Lantana camara'},
+					{ url: 'images/dodsonian/mexicanbutterflyweed.jpg', caption: 'Mexican Butterfly Weed'},
 				],
 				{
-					target: window.document.querySelectorAll('#vaviloniangallery')[0],
+					target: window.document.querySelectorAll('#dodsoniangallery')[0],
 					preventHide: true,
 					getImageSource: function(obj){
 						return obj.url;
@@ -50,18 +50,18 @@
 
 </head>
 <body>
-	<div data-role="page">
+	<div data-role="page" class="page">
 		<div data-role="header">
-			<h1>vavilonian mimicry</h1>
+			<h1>Dodsonian mimicry</h1>
 			<a data-theme="a" data-role="button" href="types.html" rel="external" data-transition="slide" data-direction="reverse">types</a>
 		</div>
 		<div class="background">
-			<div class="gallerypane" id="vaviloniangallery">
+			<div class="gallerypane" id="dodsoniangallery">
 
 			</div>
 			<div class="infopane">
 				<p>
-
+Dodsonian mimicry is a form of reproductive floral mimicry. The model belongs to a different species than the mimic. The name refers to Calaway H. Dodson. By providing similar sensory signals as the model flower, it can lure its pollinators. Like Bakerian mimics, no nectar is provided. Epidendrum ibaguense of the family Orchidaceae resembles flowers of Lantana camara and Asclepias curassavica, and is pollinated by Monarch Butterflies and perhaps hummingbirds. Similar cases are seen in some other species of the same family. The mimetic species may still have pollinators of its own though, for example a lamellicorn beetle which usually pollinates correspondingly colored Cistus flowers is also known to aid in pollination of Ophrys species that are normally pollinated by bees.
 				</p>
 			</div>
 		</div>

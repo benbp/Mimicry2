@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		
+															<!-- PHOTOSWIPE -->
+	<link href="photoswipe.css" type="text/css" rel="stylesheet" />
+															
+	<script type="text/javascript" src="scripts/lib/klass.min.js"></script>
+	<script type="text/javascript" src="scripts/code.photoswipe-3.0.4.min.js"></script>
+	
+	<script type="text/javascript">
+	(function(window, Util, PhotoSwipe){
+
+		Util.Events.domReady(function(e){
+
+			var instance;
+
+			instance = PhotoSwipe.attach(
+				[
+					{ url: 'images/vavilovian/rye.jpg', caption: 'Rye, mimetic weed of wheat'},
+					{ url: 'images/vavilovian/oats.jpg', caption: 'Oats, another former weed'},
+					{ url: 'images/vavilovian/flax.jpg', caption: 'False Flax (1) & Flax (2)'},
+				],
+				{
+					target: window.document.querySelectorAll('#vaviloviangallery')[0],
+					preventHide: true,
+					getImageSource: function(obj){
+						return obj.url;
+					},
+					getImageCaption: function(obj){
+						return obj.caption;
+					}
+				}
+			);
+			instance.show(0);	
+		});
+	}(window, window.Code.Util, window.Code.PhotoSwipe));
+	</script>
+															<!-- /PHOTOSWIPE -->
+
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>	
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans' rel='stylesheet' type='text/css'>
+	
+
+</head>
+<body>
+	<div data-role="page" class="page">
+		<div data-role="header">
+			<h1>vavilovian mimicry</h1>
+			<a data-theme="a" data-role="button" href="types.html" rel="external" data-transition="slide" data-direction="reverse">types</a>
+		</div>
+		<div class="background">
+			<div class="gallerypane" id="vaviloviangallery">
+
+			</div>
+			<div class="infopane">
+				<p>
+					Vavilovian mimicry (also crop mimicry or weed mimicry) is a form of mimicry in plants where a weed comes to share one or more characteristics with a domesticated plant through generations of artificial selection. It is named after Nikolai Vavilov, a prominent Russian plant geneticist who identified the centres of origin of cultivated plants. Selection against the weed may occur by killing a young or adult weed, separating its seeds from those of the crop (winnowing), or both. This has been done manually since Neolithic times, and in more recent years by agricultural machinery.<br /><br />
+
+					Vavilovian mimicry is a good illustration of unintentional selection by humans. Although the human selective agents might be conscious of their impact on the local weed gene pool, such effects go against the goals of those growing crops. Weeders do not want to select weeds that are increasingly similar to the cultivated plant, yet the only other option is to let the weeds grow and compete with crops for sunlight and nutrients. Similar situations include antibiotic resistance and, of similar nature to crop mimicry, herbicide resistance. This can be contrasted with other forms of artificial selection that do tend toward a favorable outcome, such as selective breeding. Having acquired many desirable qualities by being subjected to similar selective pressures, Vavilovian mimics may eventually be domesticated themselves. Vavilov called these weeds-become-crops secondary crops.
+				</p>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
