@@ -253,6 +253,7 @@ and (orientation : landscape) {
 	#defensive p, #aggressive p, #reproductive p, #automimicry p {
 		margin: 20px 30px 0 30px;
 		line-height:32px;
+		padding:10px 30px 0 30px;
 	}
 
 												/* FORMATTING FOR TYPES OF MIMICRY PAGES */
